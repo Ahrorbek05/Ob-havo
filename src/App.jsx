@@ -13,6 +13,7 @@ const App = () => {
   const API_KEY = "b1b15e88fa797225412429c1c50c122a1"
   const BASE_URL = "https://api.openweathermap.org/data/2.5/";
 
+
   const fetchWeatherData = async (region) => {
     try {
       const response = await axios.get(`${BASE_URL}weather`, {
@@ -56,7 +57,7 @@ const App = () => {
         </select>
 
         {weatherData && (
-          <div className="card bg-base-100 min-h-screen min-h-48 w-full md:w-[510px] mt-8 p-6 shadow-xl">
+          <div className="card bg-base-100 min-h-screen min-h-32 w-full md:w-[510px] mt-8 p-6 shadow-xl">
   <h2 className="text-xl md:text-2xl font-bold mb-4">{selectedRegion} viloyati</h2>
   <div className="text-base md:text-lg mb-4">
     Hozirgi harorat: <strong>{weatherData.main.temp}°C</strong>
